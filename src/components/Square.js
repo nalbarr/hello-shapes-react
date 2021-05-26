@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const Square = ({name, side}) => {
+const Square = ({ name, side }) => {
   const [area, setArea] = useState(0.0);
 
-
   const handleCalculate = () => {
-    setArea(getArea(side))
-  }
+    setArea(getArea(side));
+  };
 
   const handleReset = () => {
-    setArea(0.0)
-  }  
+    setArea(0.0);
+  };
 
-  const getArea = (side) => { return side * side;}
+  const getArea = (side) => {
+    return side * side;
+  };
 
   return (
     <div>
@@ -20,9 +21,9 @@ const Square = ({name, side}) => {
       <br />
       Area: {area}
       <button onClick={handleCalculate}>Calculate Area</button>
-      <button onClick={handleReset}>Reset</button>      
+      <button onClick={handleReset}>Reset</button>
     </div>
-  )
-}
+  );
+};
 
 export default Square;

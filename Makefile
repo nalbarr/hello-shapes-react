@@ -1,5 +1,6 @@
 help:
 	@echo make install
+	@echo make format-check
 	@echo make format
 	@echo make lint
 	@echo make run
@@ -7,11 +8,14 @@ help:
 install:
 	yarn install
 
+format-check:
+	yarn prettier --check "src/**/*.js"
+
 format:
-	prettier --check "src/**/*.js"
+	yarn prettier --write "src/**/*.js"
 
 lint:
-	npx eslint
+	yarn eslint
 
 run:
 	yarn start

@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const Shape = ({name, getArea}) => {
+const Shape = ({ name, getArea }) => {
   const [area, setArea] = useState(0.0);
 
   const handleCalculate = () => {
-    console.log('getArea: ', getArea);  
-    setArea(getArea)
-  }
+    console.log("getArea: ", getArea);
+    setArea(getArea);
+  };
 
   const handleReset = () => {
-    setArea(0.0)
-  }  
+    setArea(0.0);
+  };
 
   return (
     <div>
@@ -18,9 +18,9 @@ const Shape = ({name, getArea}) => {
       <br />
       Area: {area}
       <button onClick={handleCalculate}>Calculate Area</button>
-      <button onClick={handleReset}>Reset</button>      
+      <button onClick={handleReset}>Reset</button>
     </div>
-  )
-}
+  );
+};
 
 export default Shape;

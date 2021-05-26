@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef } from "react";
 
 const FunctionalCounterWithRefs = () => {
   const [count, setCount] = useState(0);
@@ -6,23 +6,22 @@ const FunctionalCounterWithRefs = () => {
   const twotimesRef = useRef(0);
 
   const increment = () => {
-    console.log('count: ', count + 1);
-    setCount(count + 1)
-  }
+    console.log("count: ", count + 1);
+    setCount(count + 1);
+  };
 
   const focusOnRef = () => {
     // emulate 2x by calling incremental operator two times
     twotimesRef.current++;
     twotimesRef.current++;
-    console.log('twotimesRef: ', twotimesRef.current);
+    console.log("twotimesRef: ", twotimesRef.current);
     setTwoTimes(twotimesRef.current);
-  }
-
+  };
 
   return (
     <div>
       FunctionalCounterWithRefs
-      <br />      
+      <br />
       {count}
       <br />
       {twotimes}
@@ -30,7 +29,7 @@ const FunctionalCounterWithRefs = () => {
       <button onClick={increment}>+1</button>
       <button onClick={focusOnRef}>2 x</button>
     </div>
-  )
-}
+  );
+};
 
 export default FunctionalCounterWithRefs;
