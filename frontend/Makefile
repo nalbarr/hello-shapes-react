@@ -18,4 +18,5 @@ lint:
 	yarn eslint
 
 run:
-	yarn start
+	# yarn start
+	NODE_OPTIONS=--openssl-legacy-provider npm run start
