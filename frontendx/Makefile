@@ -18,4 +18,7 @@ lint:
 	yarn eslint
 
 run:
-	yarn start
+	# yarn start
+	# https://levelup.gitconnected.com/how-to-fix-the-err-ossl-evp-unsupported-error-in-node-js-197082f42185
+	NODE_OPTIONS=--openssl-legacy-provider npm run start
+	
