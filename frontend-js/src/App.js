@@ -1,4 +1,5 @@
 import "./App.css";
+import React from 'react';
 import {
   ClassCounter,
   FunctionalCounter,
@@ -13,8 +14,7 @@ import {
   withSquareMods,
   ShapeWithRefs,
   withSquareModsRefs,
-}
-  from "./componentsx";
+} from "./componentsx";
 
 // NAA.
 // 1. ClassCounter is a React Class Component.
@@ -28,20 +28,12 @@ function App() {
   const Square2 = withSquareMods(Shape);
   const Square3 = withSquareModsRefs(ShapeWithRefs);
 
-  const element = document.getElementById("square2")
-  if (element !== null) {
-    element.style.display = "square2-changed"
-  } else {
-    console.log("element is", element)
-  }
   // TODO: NA, NLA.
   // - forwardRefs?
 
   return (
     <div>
-      <p id="paragraph1">
-        I am a paragraph element.
-      </p>
+      <p id="paragraph1">I am a paragraph element.</p>
       <ClassCounter />
       <hr />
       <FunctionalCounter />
