@@ -6,16 +6,16 @@ help:
 	@echo make run
 
 install:
-	yarn install
+	pnpm install
 
 format-check:
-	yarn prettier --check "src/**/*.js"
+	pnpm prettier --check "src/**/*.js"
 
 format:
-	yarn prettier --write "src/**/*.js"
+	pnpm prettier --write "src/**/*.js"
 
 lint:
-	yarn eslint
+	pnpm eslint
 
 run:
 	# yarn start
